@@ -27,7 +27,7 @@ public class PDF_Generator_Service {
         Font fontTitle= FontFactory.getFont(FontFactory.HELVETICA_BOLD);
         fontTitle.setSize(18);
 
-        Paragraph paragraph=new Paragraph("This is a title.",fontTitle);
+        Paragraph paragraph=new Paragraph("COLEGIUL MEDICILOR MARAMURES",fontTitle);
         paragraph.setAlignment(Paragraph.ALIGN_CENTER);
 
         Font fontParagraph=FontFactory.getFont(FontFactory.HELVETICA_BOLD);
@@ -45,6 +45,7 @@ public class PDF_Generator_Service {
 
         //Add backgound
         document.add(new Paragraph(" "));
+
 
         //Add Table
         PdfPTable table = new PdfPTable(3);
@@ -64,6 +65,7 @@ public class PDF_Generator_Service {
         table.addCell("2.1");
         table.addCell("2.2");
         table.addCell("2.3");
+
 
         document.add(table);
         document.close();
